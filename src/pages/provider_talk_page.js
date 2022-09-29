@@ -203,8 +203,8 @@ function Provider_talk_page() {
                 </Container>
               </CardBody>
               <CardFooter className="bg-transparent">
-                <div className="row">
-                  <div className="col-11">
+              <div className="row g-2">
+                  <div className="col-md-10">
                     <Input
                       type="text"
                       value={textchat}
@@ -213,9 +213,9 @@ function Provider_talk_page() {
                       }}
                     ></Input>
                   </div>
-                  <div className="col-1 text-center">
+                  <div className="col-md-2">
                     <Button
-                      color="primary"
+                      color="primary w-100"
                       onClick={() => {
                         add_chat();
                       }}

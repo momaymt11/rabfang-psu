@@ -58,8 +58,20 @@ function Mentalhealth_test_page() {
     console.log(updatequestionInsert);
   };
 
+
+  const containArr = () => {
+    var i = 0; 
+    questionInsert.forEach((element) => {
+      if(element !== undefined){
+        i++;
+      }
+    });
+    return i;
+  }
+
   const send_form = async () => {
-    if (checklength >= 20) {
+    if (containArr() === question.length) {
+      //check ratio all array has value
       axios
         .post(URL + "/rabfang_api/mentalhealth/add_form", {
           name: nameInsert,
@@ -137,6 +149,9 @@ function Mentalhealth_test_page() {
                       justifyContent: "flex-start",
                     }}
                   >
+                         <div class="container">
+                      <div class="row">
+                        <div class="col-md-6">
                     {i["choicevalue"].map((j) => (
                       <Container
                         style={{
@@ -145,16 +160,20 @@ function Mentalhealth_test_page() {
                           justifyContent: "flex-start",
                         }}
                       >
+                     
                         <input
                           type="radio"
                           name={i["qname"]}
                           value={j["value"]}
                           onChange={updateArray(index)}
                         ></input>
-
+                   
                         <span style={{ paddingLeft: "10px" }}>{j["name"]}</span>
                       </Container>
                     ))}
+                    </div>
+                      </div>
+                      </div>
                   </Container>
                 ))}
               </Container>

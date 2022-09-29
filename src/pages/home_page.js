@@ -10,7 +10,7 @@ import {
   Row,
 } from "reactstrap";
 import Custom_Navbar from "../components/Custom_Navbar";
-
+import { Link } from "react-router-dom";
 import Footer from "../components/Custom_Navbar/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -43,25 +43,22 @@ function home_page() {
           paddingTop: "35px",
         }}
       >
+
         <Container
           style={{
             display: "flex",
             flex: 1,
+            paddingTop: "100px",
           }}
         >
+ <div class="row g-3">
+            <div class="col-md-6">
           <img
             src="https://img.freepik.com/free-vector/people-waving-hand-illustration-concept_52683-29825.jpg?t=st=1651303381~exp=1651303981~hmac=511eaf76e32e0b25c9584884c63e44a59131451475c18dc4bb2e609c4a89a05b&w=900"
             width={"100%"}
           />
-        </Container>
-        <Container
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            flex: 1,
-            background: "white",
-          }}
-        >
+     </div>
+     <div class="col-md-6">
           <Card>
             <CardBody>
               <h1> RubFangPSU ? </h1>
@@ -73,14 +70,24 @@ function home_page() {
                 concerns with
               </CardTitle>
             </CardBody>
-            <Button outline color="primary" style={{ margin: "8px" }}>
+            <Link
+                  to="/mentalhealth_test"
+                  className="btn btn-outline-primary"
+                  style={{ margin: "8px" }}
+                >
               Mental Health Test
-            </Button>
-            <Button outline color="primary" style={{ margin: "8px" }}>
+            </Link>
+            <Link
+                  to="/satisfaction_form"
+                  className="btn btn-outline-primary"
+                  style={{ margin: "8px" }}
+                >
               Satisfaction Form
-            </Button>
+            </Link>
           </Card>
-        </Container>
+           </div>
+           </div>
+          </Container>
       </Container>
       <div
         style={{

@@ -232,7 +232,7 @@ function Admin_psychiatrist_management() {
             </Button>
             <Button
               onClick={() => {
-                setModal(!modal);
+                setmodalAdd(!modalAdd);
               }}
               style={{ margin: 10 }}
               color="secondary"

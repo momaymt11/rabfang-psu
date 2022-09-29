@@ -43,6 +43,7 @@ function Satisfaction_form() {
   }, []);
 
   const updateArray = (index) => (e) => {
+    console.log(containArr() === question.length);
     setlastrdio(index);
     if (lastrdio != index) {
       setchecklength(checklength + 1);
@@ -58,8 +59,18 @@ function Satisfaction_form() {
     console.log(updatequestionInsert);
   };
 
+  const containArr = () => {
+    var i = 0; 
+    questionInsert.forEach((element) => {
+      if(element !== undefined){
+        i++;
+      }
+    });
+    return i;
+  }
   const send_form = async () => {
-    if (checklength >= 20) {
+    if (containArr() === question.length) {
+       //check ratio all array has value
       axios
         .post(URL + "/rabfang_api/satisfaction/add_form", {
           name: nameInsert,
@@ -126,7 +137,7 @@ function Satisfaction_form() {
                 </div>
               </CardTitle>
               <Container style={{ padding: "10px" }}>
-                {item["choice"].map((i) => (
+              {item["choice"].map((i) => (
                   <Container
                     style={{
                       display: "flex",
@@ -134,6 +145,9 @@ function Satisfaction_form() {
                       justifyContent: "flex-start",
                     }}
                   >
+                         <div class="container">
+                      <div class="row">
+                        <div class="col-md-6">
                     {i["choicevalue"].map((j) => (
                       <Container
                         style={{
@@ -142,16 +156,20 @@ function Satisfaction_form() {
                           justifyContent: "flex-start",
                         }}
                       >
+                     
                         <input
                           type="radio"
                           name={i["qname"]}
                           value={j["value"]}
                           onChange={updateArray(index)}
                         ></input>
-
+                   
                         <span style={{ paddingLeft: "10px" }}>{j["name"]}</span>
                       </Container>
                     ))}
+                    </div>
+                      </div>
+                      </div>
                   </Container>
                 ))}
               </Container>
