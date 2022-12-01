@@ -15,7 +15,6 @@ class Psy extends BaseController
     public function __construct()
     {
 
-
         header('Access-Control-Allow-Origin: *');
         header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
         header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
@@ -77,8 +76,6 @@ class Psy extends BaseController
             ->groupBy('m_id')
             ->orderBy('m_datetime', 'DESC')
             ->findAll();
-
-
 
         if ($data) {
             echo json_encode(array('status' => true, 'data' => $data), JSON_UNESCAPED_SLASHES);

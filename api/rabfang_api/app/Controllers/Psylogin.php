@@ -10,8 +10,6 @@ class Psylogin extends BaseController
 
     public function __construct()
     {
-
-
         header('Access-Control-Allow-Origin: *');
         header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
         header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
@@ -23,8 +21,6 @@ class Psylogin extends BaseController
 
     public function auth()
     {
-
-
 
         $psy_email = $this->request->getVar('psy_email');
         $psy_password = $this->request->getVar('psy_password');

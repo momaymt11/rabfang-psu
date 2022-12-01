@@ -71,15 +71,9 @@ class User extends BaseController
         }
     }
 
-
-
     public function user_make_an_appointment()
     {
-
-
         $data =  $this->PsychiatristModel->findAll();
-
-
 
         foreach ($data as $row) {
 
@@ -102,7 +96,6 @@ class User extends BaseController
 
     public function user_make_an_appointment_action()
     {
-
         $a_u_id = $this->request->getVar('a_u_id');
         $a_psy_id = $this->request->getVar('a_psy_id');
         $a_topic = $this->request->getVar('a_topic');

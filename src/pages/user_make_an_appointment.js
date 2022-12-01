@@ -43,7 +43,7 @@ function User_make_an_appointment() {
   const [selectTopic, setselectTopic] = useState(["General"]);
   useEffect(() => {
     axios
-      .post(URL + "/rabfang_api/user/user_make_an_appointment")
+      .get(URL + "/rabfang_api/user/user_make_an_appointment")
       .then(function (response) {
         if (response.data.status) {
           setDoctorList(response.data.data);
@@ -79,7 +79,7 @@ function User_make_an_appointment() {
 
   const user_make_an_appointment_action = async () => {
     axios
-      .post(URL + "/rabfang_api/user/user_make_an_appointment_action", {
+      .post(URL + "/rabfang_api/user/user_make_an_appointment/add", {
         a_u_id: u_id,
         a_psy_id: selectPsyId,
         a_topic: selectTopic.toString(),

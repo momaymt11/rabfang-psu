@@ -63,7 +63,7 @@ function home_page() {
             <CardBody>
               <h1> RubFangPSU ? </h1>
               <CardTitle>
-                We are an online psychiatrist consultation platform for Prince
+                We are an online psychiatrisst consultation platform for Prince
                 of Songkla University students. Phuket Campus That allows you to
                 discuss your concerns with a psychiatrist and psychologist
                 through a private and safe meeting with your doctor. Discuss

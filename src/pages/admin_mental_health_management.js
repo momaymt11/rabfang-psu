@@ -314,8 +314,9 @@ function Admin_mental_health_management() {
               </thead>
               <tbody>
                 {resultList.map((item, index) => (
+            
                   <tr>
-                    <td scope="row">{item["m_f_id"]}</td>
+                    <td scope="row">{index+1}</td>
 
                     <td>{item["m_f_question"]}</td>
 

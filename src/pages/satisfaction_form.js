@@ -96,8 +96,18 @@ function Satisfaction_form() {
     >
       <Custom_Navbar />
       <Container style={{ paddingTop: "100px" }}>
-        <h1>Satisfaction Form</h1>
-        <ui>
+        <h1>Satisfaction Form</h1>{
+<ui>
+<Card style={{ padding: "10px", margin: "10px" }}>
+            <CardTitle>
+              <div>{"Please complete the satisfaction survey on this link after your consultation. "}</div>
+              <div>Link: https://docs.google.com/forms/d/e/1FAIpQLSfuNZD_RII4PnDOKnISqWrHiFzA7nmgWjB1fMkDs3QaXHgIvQ/viewform</div>
+            </CardTitle>
+          
+          </Card>
+</ui>
+        }
+        {/* <ui>
           <Card style={{ padding: "10px", margin: "10px" }}>
             <CardTitle>
               <div>{"Hi, there! What's your name?"}</div>
@@ -163,7 +173,6 @@ function Satisfaction_form() {
                           value={j["value"]}
                           onChange={updateArray(index)}
                         ></input>
-                   
                         <span style={{ paddingLeft: "10px" }}>{j["name"]}</span>
                       </Container>
                     ))}
@@ -175,9 +184,9 @@ function Satisfaction_form() {
               </Container>
             </Card>
           ))}
-        </ui>
+        </ui> */}
       </Container>
-      <Button
+      {/* <Button
         color="primary"
         style={{ margin: "10px" }}
         onClick={async () => {
@@ -185,7 +194,7 @@ function Satisfaction_form() {
         }}
       >
         Submit
-      </Button>
+      </Button> */}
       <Footer />
     </Container>
   );

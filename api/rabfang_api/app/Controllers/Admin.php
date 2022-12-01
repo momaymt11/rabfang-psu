@@ -409,7 +409,6 @@ class Admin extends BaseController
 
     public function  mental_healt_add()
     {
-
         $m_f_question = $this->request->getVar('m_f_question');
         $rules = [
             'm_f_question' => [

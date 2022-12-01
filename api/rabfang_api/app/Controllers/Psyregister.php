@@ -22,7 +22,6 @@ class Psyregister extends BaseController
 
     public function register()
     {
-
         $psy_name = $this->request->getVar('psy_name');
         $psy_email = $this->request->getVar('psy_email');
         $psy_password = $this->request->getVar('psy_password');

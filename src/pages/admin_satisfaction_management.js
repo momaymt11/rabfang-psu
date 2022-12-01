@@ -316,7 +316,7 @@ function Admin_satisfaction_management() {
               <tbody>
                 {resultList.map((item, index) => (
                   <tr>
-                    <td scope="row">{item["s_f_id"]}</td>
+                    <td scope="row">{index+1}</td>
 
                     <td>{item["s_f_question"]}</td>
 
